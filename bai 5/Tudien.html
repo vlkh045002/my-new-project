@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>JS</title>
+    <style>
+       
+    </style>
+</head>
+
+<body>
+<h3>Từ điển</h3>
+<input type="text" id="txtValue"></input>
+<input type="button" id="btnSearch" value="Search" onclick="search_element_to_array();"></input>
+<div id="result"></div>
+</body>
+
+<script>
+    let tienganh = ['love', 'job', 'money', 'football' ];
+    let tiengviet = ['tình yêu', 'công việc', 'tiền', 'bóng đá'];
+
+    function search_element_to_array() {
+        let text = document.getElementById('txtValue').value;
+
+
+
+        for (let i=0;i < tienganh.length; i++){
+
+            if(text == tienganh[i]) {
+                document.getElementById('result').innerHTML = tiengviet[i];
+                break;
+            } else{
+                document.getElementById('result').innerHTML="Từ này không có trong từ điển. Vui lòng nhập lại";
+            }
+
+        }
+    }
+</script>
+
+</html>
+
+
