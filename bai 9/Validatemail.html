@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Email</title>
+</head>
+<body>
+<script>
+    function IsEmail(str) {
+        let regular =  /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$/;
+        if (regular.test(str)) {
+            return true;
+        }
+        return false;
+    }
+    let email = "a@gmail.com";
+    alert(IsEmail(email));
+    let email1 = "@gmail.";
+    alert(IsEmail(email1));
+</script>
+</body>
+</html>
